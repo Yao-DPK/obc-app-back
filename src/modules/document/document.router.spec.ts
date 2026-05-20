@@ -13,7 +13,7 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { DocumentRouter } from './document.router';
 import { DocumentService } from './document.service';
 import { documents } from 'src/database/schema';
-import { db, eq } from 'src/database/config/db.config';
+import { db, eq } from 'src/database/db';
 
 const mockDocumentService = {
   create: jest.fn(),
