@@ -17,6 +17,7 @@ async function bootstrap() {
   );
 
   const frontendUrl = process.env.PUBLIC_APP_FRONT_BASE_URL;
+  const port = process.env.PORT || 3031;
   const allowedOrigins = frontendUrl ? [frontendUrl] : ['http://localhost:5173'];
 
   /* app.enableCors({
@@ -48,7 +49,7 @@ async function bootstrap() {
   });
   
 
-  await app.listen(3000, '0.0.0.0');
+  await app.listen(port, '0.0.0.0');
 }
 
 bootstrap();
